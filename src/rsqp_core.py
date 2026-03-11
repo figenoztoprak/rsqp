@@ -194,10 +194,6 @@ Optimization"
 '''   
 def rsqp_solve(objcons, gradjac, hessL, n, m, bl, bu, x_0, 
                options: rsqp_options()) -> rsqp_solution():
-
-        #FGN: hessL'in sırasını değiştirdim yukarıda!!
-
-    #warnings.filterwarnings("ignore")
     
     #get options
     maxiter = options.maxiter

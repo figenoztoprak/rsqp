@@ -26,6 +26,18 @@ Here,
 - x_initial is the initial solution point to start the algorithm
 - options is the set of options of type rsqp_options().
 
+The available options in rsqp_options() are as follows.
+- maxiter       : Maximum number of iterations 
+- opttol        : Optimality tolerance
+- feastol       : Feasibility tolerance
+- noiseLevelObj : Estimated noise level in objective evaluations
+- noiseLevelCons: Estimated noise level in constraint evaluations
+- noiseLevelGrad: Estimated noise level in objective gradient evaluations
+- noiseLevelJac : Estimated noise level in constraint Jacobian evaluations
+- hessType      : Type of Hessian approximation
+- verbose       : Whether messages and iterate information should be printed
+- qp_solver     : The QP subsolver
+
 The current version of rSQP handles inequality constraints and bound constraints only (equality constraints are not accepted).  Also, noise level estimations are not computed internally in the current version, these estimations must be provided by the user via rsqp_options. 
 
 ## Examples
