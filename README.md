@@ -17,31 +17,20 @@ Call the noise aware SQP solver via:
 ``` rsqp_solve(evalFC, evalGA, evalH, nVars, nCons, bl, bu, x_initial, options)```
 
 Here,
-    - evalFC is a routine that returns objective and constraint evaluations
-    - evalGA is a routine that returns objective gradient and Jacobian evaluations
-    - evalH is a routine that returns Hessian of the Lagrangian using given multipliers (only needed if options.hessType=1)
-    - nVars is the number of variables of the problem
-    - nCons is the number of constraints of the problem
-    - bl and bu are lower and upper bounds of the variables respectively (set to -numpy.inf/numpy.inf if no bounds)
-    - x_initial is the initial solution point to start the algorithm
-    - options is the set of options of type rsqp_options with default values defined as follows.
-    rsqp_options:
-        maxiter: int = 1000
-        opttol: float = 1e-8
-        feastol: float = 1e-8
-        noiseLevelObj: float = 0.0
-        noiseLevelCons: float = 0.0
-        noiseLevelGrad: float = 0.0
-        noiseLevelJac: float = 0.0
-        hessType: int = 2
-        verbose: bool = True
-        qp_solver: str = "scipy"
+- evalFC is a routine that returns objective and constraint evaluations
+- evalGA is a routine that returns objective gradient and Jacobian evaluations
+- evalH is a routine that returns Hessian of the Lagrangian using given multipliers (only needed if options.hessType=1)
+- nVars is the number of variables of the problem
+- nCons is the number of constraints of the problem
+- bl and bu are lower and upper bounds of the variables respectively (set to -numpy.inf/numpy.inf if no bounds)
+- x_initial is the initial solution point to start the algorithm
+- options is the set of options of type rsqp_options().
 
 The current version of rSQP handles inequality constraints and bound constraints only (equality constraints are not accepted).  Also, noise level estimations are not computed internally in the current version, these estimations must be provided by the user via rsqp_options. 
 
 ## Examples
 
-Examples using rSQP are provided under the *examples* folder 
+Examples using rSQP are provided under the *examples* folder. 
 
 ## Testing on Cutest problems
 
