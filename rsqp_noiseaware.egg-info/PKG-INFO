@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: rsqp_noiseaware
+Version: 0.0.1
+Summary: Noise tolerant SQP algorithm with relaxations
+Home-page: "https://github.com/figenoztoprak/rSQP"
+License: "MIT"
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: qpsolvers
