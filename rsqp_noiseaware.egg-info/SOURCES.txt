@@ -1,6 +1,8 @@
 README.md
 pyproject.toml
 setup.cfg
+rsqp_noiseaware/__init__.py
+rsqp_noiseaware/rsqp_core.py
 rsqp_noiseaware.egg-info/PKG-INFO
 rsqp_noiseaware.egg-info/SOURCES.txt
 rsqp_noiseaware.egg-info/dependency_links.txt
